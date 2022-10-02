@@ -50,6 +50,6 @@ export const getCompositionPaths = async () => {
   });
 
   return pages.compositions
-    .filter(c => c.composition._slug && c.composition._slug !== '/')
+    .filter(c => c.composition._slug && c.composition._slug !== '/' && c.composition._slug.startsWith('/'))
     .map(c => (c.composition._slug?.startsWith('/') ? `${c.composition._slug}` : `/${c.composition._slug}`));
 };

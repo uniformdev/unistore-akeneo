@@ -16,7 +16,7 @@ export const getStaticProps: GetStaticProps<{
   const { preview } = context;
   return {
     props: {
-      composition: await getCompositionBySlug(slug, context),
+      composition: await getCompositionBySlug(slug.startsWith('/') ? slug : `/${slug}`, context),
       preview: Boolean(preview),
     },
   };

@@ -1,7 +1,7 @@
 composition:
   _name: Contact Us
   _id: 38f6866b-80e4-4fee-b1c9-520fbc83980e
-  _slug: contact
+  _slug: /contact
   type: page
   parameters:
     pageMetaTitle:
@@ -15,10 +15,12 @@ composition:
       value: true
   slots:
     content:
-      - type: container
+      - _id: d38edb5d-004b-4946-8a00-7632598f7011
+        type: container
         slots:
           left:
-            - type: callToAction
+            - _id: 240c867a-5ffb-414d-9a71-53c7feeeed3c
+              type: callToAction
               variant: mini
               parameters:
                 text:
@@ -37,7 +39,8 @@ composition:
                   type: text
                   value: Call our support
           right:
-            - type: contactForm
+            - _id: 7261def4-85eb-4c38-9a37-0587cdbf17a7
+              type: contactForm
               parameters:
                 errorSubmitText:
                   type: text
@@ -49,7 +52,6 @@ composition:
                   type: text
                   value: Thanks, we will reach back to you shortly!
         variant: 13-23
-        parameters: {}
 created: '2022-09-29T23:47:26.751874+00:00'
-modified: '2022-09-29T23:47:26.751874+00:00'
+modified: '2022-10-02T01:07:41.530452+00:00'
 pattern: false

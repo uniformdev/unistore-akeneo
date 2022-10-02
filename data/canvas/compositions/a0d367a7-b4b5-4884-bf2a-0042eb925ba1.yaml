@@ -1,0 +1,12 @@
+composition:
+  _name: New Collection
+  _id: a0d367a7-b4b5-4884-bf2a-0042eb925ba1
+  _slug: /fall2022
+  type: page
+  parameters:
+    pageMetaTitle:
+      type: text
+      value: Fall 2022 - New collection
+created: '2022-10-02T00:57:40.263123+00:00'
+modified: '2022-10-02T01:02:56.651298+00:00'
+pattern: false

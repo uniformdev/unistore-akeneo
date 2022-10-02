@@ -20,7 +20,7 @@ export const getStaticProps: GetStaticProps<any> = async context => {
   const locale = 'en_US';
   if (!productName || !productId) return { notFound: true };
   const { preview } = context;
-  console.log({ productName, productId });
+  // console.log({ productName, productId });
   if (!productName || !productId) {
     return {
       props: {
