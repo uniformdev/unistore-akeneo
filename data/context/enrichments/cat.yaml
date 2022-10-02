@@ -1,0 +1,14 @@
+id: cat
+name: Categories
+cap: 100
+values:
+  - id: footwear
+    value: footwear
+  - id: jackets
+    value: jackets
+  - id: outerwear
+    value: outerwear
+  - id: '5'
+    value: pants
+  - id: workwear
+    value: workwear

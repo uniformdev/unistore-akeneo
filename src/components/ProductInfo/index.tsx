@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { useUniformContext } from '@uniformdev/context-react';
 import { useCartContext } from '@/context/CartProvider';
 import CurrencyFormatter from '@/components/CurrencyFormatter';
 import ButtonAddToCart from '@/components/atoms/ButtonAddToCart';
@@ -11,8 +12,30 @@ export type ProductInfoProps = {
 const ProductInfo = ({ product }: ProductInfoProps) => {
   const { currency } = useCartContext();
   const [quantity, setQuantity] = useState(1);
+
+  const { sku, name, meta_description, categories } = product || {};
+  const { context } = useUniformContext();
+
+  const enrichments =
+    categories && categories.length > 1
+      ? categories[1]
+          .split('_')
+          .filter((c: string) => c !== 'master')
+          .map((e: string) => {
+            return {
+              cat: 'cat',
+              key: e,
+              str: 5,
+            };
+          })
+      : [];
+
+  useEffect(() => {
+    context.update({ enrichments });
+  }, [context]);
+
   if (!product) return null;
-  const { sku, name, meta_description } = product || {};
+
   return (
     <div className="md:pt-8 pt-4 lg:w-2/3">
       <h1 className="font-overpass font-bold dark:text-white text-black text-4xl lg:text-5xl">{name}</h1>

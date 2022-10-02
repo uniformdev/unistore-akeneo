@@ -17,6 +17,51 @@ composition:
           currentCategoryProducts:
             type: number
             value: '10'
+      - _id: 1055b3d6-c342-402b-8ee9-a714e5d92007
+        type: featuredProducts
+        parameters:
+          title:
+            type: text
+            value: You May Also Like
+          products:
+            type: akeneo-product-selector
+            value:
+              locale: en_US
+              channel: ''
+              productIds:
+                - 1583537005-1045
+                - '1273192971'
+                - 1583536995-1043
+          seeMoreTitle:
+            type: text
+            value: Rain Gear
+      - _id: 0735f85d-7415-4adf-9a8c-16f81f856c1c
+        type: $personalization
+        slots:
+          pz:
+            - _id: 36437012-017e-47ea-92dd-f03e54629c64
+              type: featuredProducts
+              parameters:
+                title:
+                  type: text
+                  value: You may also like
+                products:
+                  type: akeneo-product-selector
+                  value:
+                    locale: en_US
+                    channel: ''
+                    productIds:
+                      - '1583534059'
+                      - '1583534111'
+                      - '1583534743'
+                      - '1583534859'
+        parameters:
+          count:
+            type: number
+            value: '1'
+          trackingEventName:
+            type: text
+            value: YMAL
 created: '2022-09-29T23:47:25.745327+00:00'
-modified: '2022-10-01T23:36:41.976742+00:00'
+modified: '2022-10-02T19:28:28.423583+00:00'
 pattern: false

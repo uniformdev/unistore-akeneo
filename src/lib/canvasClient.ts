@@ -1,19 +1,6 @@
-import { transformAkeneoProduct } from '@/utils/akeneo/akeneoModelConverter';
-import { getCategoryName, getProductsByCategory } from '@/utils/commerce';
-import { CanvasClient, CANVAS_PUBLISHED_STATE, CANVAS_DRAFT_STATE, enhance, EnhancerBuilder } from '@uniformdev/canvas';
+import { categoryEnhancers } from '@/utils/enhancers';
+import { CanvasClient, CANVAS_PUBLISHED_STATE, CANVAS_DRAFT_STATE, enhance } from '@uniformdev/canvas';
 import getConfig from 'next/config';
-
-export const categoryEnhancers = ({ categoryId, locale }: { categoryId: string; locale: string }) => {
-  return new EnhancerBuilder()
-    .data('categoryName', async () => (categoryId ? await getCategoryName(categoryId, locale) : ''))
-    .parameterName('currentCategoryProducts', async p => {
-      const limit = p.parameter.value as string;
-      const products = (await getProductsByCategory(categoryId, Number.parseInt(limit)))?.map(p =>
-        transformAkeneoProduct(p)
-      );
-      return products;
-    });
-};
 
 const {
   serverRuntimeConfig: { apiKey, apiHost, projectId },

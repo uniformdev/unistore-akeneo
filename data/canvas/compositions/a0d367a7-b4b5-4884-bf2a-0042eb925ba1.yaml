@@ -13,6 +13,29 @@ composition:
         type: $personalization
         slots:
           pz:
+            - _id: 32f4b357-50f5-4855-a14c-8d19029057be
+              type: featuredProduct
+              parameters:
+                title:
+                  type: text
+                  value: Look cool while getting stuff done!
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: cat_workwear
+                        r: '15'
+                        op: '>'
+                    name: 'Featured Product: Look cool while getting stuff done!'
+                subtitle:
+                  type: text
+                  value: Check out these cool polarized safety googles
+                productAsset:
+                  type: akeneo-asset-selector
+                  value:
+                    locale: en_US
+                    assetIds:
+                      - products/images_image_1_1583533935_1_jpg_products
             - _id: 4a533ba3-c2a9-43c8-8260-26f1195ed30e
               type: featuredProduct
               parameters:
@@ -55,6 +78,21 @@ composition:
           trackingEventName:
             type: text
             value: Unlock Boston
+      - _id: b78a3ae6-26e7-4aea-b654-fba4735fcc62
+        type: featuredProducts
+        parameters:
+          title:
+            type: text
+            value: Bib Overalls
+          products:
+            type: akeneo-product-selector
+            value:
+              locale: en_US
+              channel: ''
+              productIds:
+                - 1583537356-1094
+                - 1583537366-1095
+                - 1583537408-1097
       - _id: 5c320460-fa73-4605-a049-182367f81d1f
         type: featuredProducts
         parameters:
@@ -129,5 +167,5 @@ composition:
             type: text
             value: See more
 created: '2022-10-02T00:57:40.263123+00:00'
-modified: '2022-10-02T18:42:05.264038+00:00'
+modified: '2022-10-02T19:25:13.775934+00:00'
 pattern: false
