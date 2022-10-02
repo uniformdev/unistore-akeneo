@@ -8,12 +8,15 @@ const config = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
+  experimental: {
+    // This is experimental but can
+    // be enabled to allow parallel threads
+    // with nextjs automatic static generation
+    workerThreads: false,
+    cpus: 1,
+  },
   images: {
-    domains: [
-      'images.ctfassets.net',
-      'images.unsplash.com',
-      'y3ev57a1.twic.pics',
-    ],
+    domains: ['images.ctfassets.net', 'images.unsplash.com', 'y3ev57a1.twic.pics'],
     unoptimized: true,
   },
   env: {

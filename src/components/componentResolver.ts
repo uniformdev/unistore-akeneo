@@ -21,6 +21,7 @@ import Container2313 from './containers/Container23-13';
 import Container1323 from './containers/Container13-23';
 import ProductBanner from './ProductBanner';
 import CategoryHeader from './CategoryHeader';
+import FeaturedProduct from './FeaturedProduct';
 
 const componentMappings: ComponentMapping = {
   hero: HeroFullWidth,
@@ -46,6 +47,7 @@ const componentMappings: ComponentMapping = {
   'container13-23': Container1323,
   productBanner: ProductBanner,
   categoryHeader: CategoryHeader,
+  featuredProduct: FeaturedProduct,
 };
 
 type ComponentMapping = Record<string, ComponentType<any>>;

@@ -8,12 +8,12 @@ export type ProductInfoProps = {
 const ProductBanner = ({ product }: ProductInfoProps) => {
   if (!product) return null;
   const { banner_image } = product || {};
-  return null;
-  return (
+  return banner_image ? (
     <div className="container">
+      <h1>Banner {banner_image}</h1>
       <LazyLoadImage src={banner_image} />
     </div>
-  );
+  ) : null;
 };
 
 export default ProductBanner;

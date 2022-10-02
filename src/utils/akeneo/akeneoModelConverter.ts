@@ -1,7 +1,11 @@
 export const akeneoModelConverter = ({ parameter }: any) => {
   const value = parameter.value;
   if (Array.isArray(value)) {
-    return value.map(p => transformAkeneoProduct(p));
+    const transformed = value.map(p => transformAkeneoProduct(p));
+    if (transformed.length === 1) {
+      return transformed[0];
+    }
+    return transformed;
   } else {
     return transformAkeneoProduct(value);
   }
