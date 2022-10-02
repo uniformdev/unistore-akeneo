@@ -1,12 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
-import getConfig from 'next/config';
-import { ToggleEmbeddedContextDevTools } from '@uniformdev/context-devtools';
+// import getConfig from 'next/config';
+// import { ToggleEmbeddedContextDevTools } from '@uniformdev/context-devtools';
 import FooterLogo, { LogoPosition } from '@/components/Navigation/components/Logo';
 import FooterNav from '../components/FooterNav';
 
-const { serverRuntimeConfig } = getConfig();
-const { projectId, apiKey, apiHost } = serverRuntimeConfig;
+// const { serverRuntimeConfig } = getConfig();
+// { projectId, apiKey, apiHost } = serverRuntimeConfig;
 
 const Footer = () => (
   <footer className="bg-black dark:bg-gray-800 border-t  dark:border-zinc-600">
@@ -32,13 +32,13 @@ const Footer = () => (
         </a>
       </div>
     </div>
-    <ToggleEmbeddedContextDevTools
+    {/* <ToggleEmbeddedContextDevTools
       initialSettings={{
         apiHost,
         apiKey,
         projectId,
       }}
-    />
+    /> */}
   </footer>
 );
 

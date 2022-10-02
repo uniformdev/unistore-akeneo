@@ -1,0 +1,28 @@
+id: featuredProduct
+name: Featured Product
+icon: awards
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: subtitle
+    name: Subtitle
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: productAsset
+    name: Product Asset
+    type: akeneo-asset-selector
+    helpText: ''
+    typeConfig:
+      required: true
+      allowedLocale: en_US
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2022-10-02T18:04:15.030846+00:00'
+updated: '2022-10-02T18:05:23.517+00:00'

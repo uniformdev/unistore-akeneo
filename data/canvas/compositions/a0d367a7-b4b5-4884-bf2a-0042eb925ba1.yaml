@@ -7,6 +7,96 @@ composition:
     pageMetaTitle:
       type: text
       value: Fall 2022 - New collection
+  slots:
+    content:
+      - _id: 4a533ba3-c2a9-43c8-8260-26f1195ed30e
+        type: featuredProduct
+        parameters:
+          title:
+            type: text
+            value: Mow Your Lawn Like a Boss!
+          subtitle:
+            type: text
+            value: Electric start for smooth experience
+          productAsset:
+            type: akeneo-asset-selector
+            value:
+              locale: en_US
+              assetIds:
+                - products/images_image_1_1583533903_1_jpg_products
+      - _id: 5c320460-fa73-4605-a049-182367f81d1f
+        type: featuredProducts
+        parameters:
+          title:
+            type: text
+            value: Featured work jackets
+          products:
+            type: akeneo-product-selector
+            value:
+              locale: en_US
+              channel: ''
+              productIds:
+                - '1583534887'
+                - '1583535543'
+                - 1583536876-1032
+                - 1583536910-1035
+          seeMoreUrl:
+            type: text
+            value: /shop/clothing_footwear_workwear_outerwear_work_jackets
+          seeMoreTitle:
+            type: text
+            value: See more
+      - _id: 3ae21540-966f-4a92-8f13-6601afbe7ff8
+        type: callToAction
+        parameters:
+          text:
+            type: text
+            value: Some catchy call to action
+          title:
+            type: text
+            value: Get 20% off when you buy 3 products
+      - _id: e87bfc0a-634e-4485-a742-0a990ba30be7
+        type: featuredProducts
+        parameters:
+          title:
+            type: text
+            value: Featured work pants
+          products:
+            type: akeneo-product-selector
+            value:
+              locale: en_US
+              channel: ''
+              productIds:
+                - 1583538224-1152
+                - 1583537050-1052
+                - 1583537091-1059
+          seeMoreUrl:
+            type: text
+            value: /shop/clothing_footwear_workwear_work_pants
+          seeMoreTitle:
+            type: text
+            value: See more
+      - _id: 3556ff39-1643-406c-902e-26391787da22
+        type: featuredProducts
+        parameters:
+          title:
+            type: text
+            value: Safety is above all
+          products:
+            type: akeneo-product-selector
+            value:
+              locale: en_US
+              channel: ''
+              productIds:
+                - 1583536407-964
+                - 1583536429-967
+                - 1583536441-969
+          seeMoreUrl:
+            type: text
+            value: /shop/clothing_footwear_footwear_tactical_boots
+          seeMoreTitle:
+            type: text
+            value: See more
 created: '2022-10-02T00:57:40.263123+00:00'
-modified: '2022-10-02T01:02:56.651298+00:00'
+modified: '2022-10-02T18:33:56.917859+00:00'
 pattern: false

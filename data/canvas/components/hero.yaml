@@ -15,18 +15,19 @@ parameters:
       required: false
   - id: backgroundImage
     name: Background Image
-    type: akeneo-asset-selector
+    type: cloudinary-media-selector
     helpText: ''
     typeConfig:
-      required: true
+      ratio: '16:9'
+      widths: 300,500
       multiSelect: false
-      allowedLocale: en_US
+      defaultoptions: ''
 useTeamPermissions: true
 slots: []
 titleParameter: title
 canBeComposition: false
 created: '2022-09-29T23:47:24.958616+00:00'
-updated: '2022-10-01T17:57:06.389822+00:00'
+updated: '2022-10-02T18:24:11.881976+00:00'
 variants:
   - id: fullWidth
     name: Full Width

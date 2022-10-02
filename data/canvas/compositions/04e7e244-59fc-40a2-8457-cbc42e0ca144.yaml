@@ -16,62 +16,103 @@ composition:
         type: $personalization
         slots:
           pz:
-            - _id: 360de9a4-6c67-49f2-a6b4-dee029d921fe
+            - _id: d386dce5-02df-45a7-ae17-7ce61005f1c9
               type: hero
-              variant: fullWidth
               parameters:
+                title:
+                  type: text
+                  value: Launch special!
                 $pzCrit:
                   type: $pzCrit
                   value:
                     crit:
                       - l: launchSpecial
-                        r: 50
-                        op: '>='
+                        r: 0
+                        op: '>'
+                    name: ''
+                subtitle:
+                  type: text
+                  value: we got a new collection
                 backgroundImage:
-                  type: akeneo-asset-selector
+                  type: cloudinary-media-selector
                   value:
-                    locale: en_US
-                    assetIds:
-                      - >-
-                        models/images_banner_image_milwaukee_mens_black_no_days_off_hooded_sweatshirt_3_jpg_models
-            - _id: e92851b3-2a97-496d-a881-8867454332ba
+                    - alt: ''
+                      url: >-
+                        https://res.cloudinary.com/uniformdev/image/upload/v1664734526/Akeneo%20demo/jimmy-nilsson-masth-y8ISj4_9Cwc-unsplash_gstklg.jpg
+                      ratio: '16:9'
+                      width: '6000'
+                      format: jpg
+                      height: '4000'
+                      widths: 300,500
+                      caption: ''
+                      options: ''
+                      version: 1664734526
+                      publicId: >-
+                        Akeneo
+                        demo/jimmy-nilsson-masth-y8ISj4_9Cwc-unsplash_gstklg
+                      createdAt: '2022-10-02T18:15:26Z'
+                      previewUrl: >-
+                        https://res.cloudinary.com/uniformdev/image/upload/q_auto:low,f_auto,w_150/Akeneo%20demo/jimmy-nilsson-masth-y8ISj4_9Cwc-unsplash_gstklg.jpg
+                      resourceType: image
+                      transformation: >-
+                        c_crop,h_1248,w_1872,x_1604,y_897/c_scale,h_1248,w_1872/f_auto,q_auto
+                      globalImageOptions: ''
+            - _id: ef3e0a61-ff1f-496f-a2cc-cf512637c339
               type: hero
-              variant: fullWidth
-              parameters:
-                $pzCrit:
-                  type: $pzCrit
-                  value:
-                    crit:
-                      - l: shoppingCartActive
-                        op: +
-                backgroundImage:
-                  type: akeneo-asset-selector
-                  value:
-                    locale: en_US
-                    assetIds:
-                      - >-
-                        models/images_banner_image_corliving_dillon_oblong_dining_table_1_png_models
-            - _id: 774d3045-1b05-4412-91e4-af57bcd22a4e
-              type: hero
-              variant: ''
               parameters:
                 title:
                   type: text
-                  value: Hello, there!
+                  value: Akeneo storefront is here!
                 subtitle:
                   type: text
-                  value: and a subtitle to support the message
+                  value: Build personalized experiences with your PIM
                 backgroundImage:
-                  type: akeneo-asset-selector
+                  type: cloudinary-media-selector
                   value:
-                    locale: en_US
-                    assetIds:
-                      - >-
-                        atmosphere/images_image_atmos_brown_armen_livings_sofas_loveseats_small_png
+                    - alt: ''
+                      url: >-
+                        https://res.cloudinary.com/uniformdev/image/upload/v1664734570/Akeneo%20demo/mufid-majnun-Ywmav2Wtgpo-unsplash_zsmvrc.jpg
+                      ratio: ''
+                      width: '3984'
+                      format: jpg
+                      height: '2656'
+                      widths: ''
+                      caption: ''
+                      options: ''
+                      version: 1664734570
+                      publicId: Akeneo demo/mufid-majnun-Ywmav2Wtgpo-unsplash_zsmvrc
+                      createdAt: '2022-10-02T18:16:10Z'
+                      previewUrl: >-
+                        https://res.cloudinary.com/uniformdev/image/upload/q_auto:low,f_auto,w_150/Akeneo%20demo/mufid-majnun-Ywmav2Wtgpo-unsplash_zsmvrc.jpg
+                      resourceType: image
+                      transformation: >-
+                        c_crop,h_1489,w_2234,x_1750,y_1167/c_scale,h_1489,w_2234/f_auto,q_auto
+                      globalImageOptions: ''
         parameters:
           trackingEventName:
             type: text
             value: Home hero
+      - _id: e57fa940-1c8d-4c02-a6d8-cebcd3f89282
+        type: featuredProducts
+        parameters:
+          title:
+            type: text
+            value: Fall is here!
+          products:
+            type: akeneo-product-selector
+            value:
+              locale: en_US
+              channel: ''
+              productIds:
+                - '1583534139'
+                - '1583534195'
+                - '1583535543'
+          seeMoreUrl:
+            type: text
+            value: /fall2022
+          seeMoreTitle:
+            type: text
+            value: See our new collection
       - _id: c3a6a04e-f1cd-4053-b607-1229f7721c4a
         type: callToAction
         parameters:
@@ -90,39 +131,6 @@ composition:
           callToActionTitle:
             type: text
             value: null
-      - _id: e57fa940-1c8d-4c02-a6d8-cebcd3f89282
-        type: featuredProducts
-        parameters:
-          title:
-            type: text
-            value: Winter is coming
-          products:
-            type: akeneo-product-selector
-            value:
-              locale: en_US
-              channel: ''
-              productIds:
-                - '1583534139'
-                - '1583534195'
-                - '1583535543'
-          seeMoreUrl:
-            type: text
-            value: /shop/snowblowers
-          seeMoreTitle:
-            type: text
-            value: get ready to blow some snow
-      - _id: eaefe197-d7bb-4db4-94f8-226385e2be63
-        type: callToAction
-        parameters:
-          text:
-            type: text
-            value: >-
-              Curabitur placerat, turpis non cursus rhoncus, tellus tortor
-              lobortis quam, vitae elementum nibh libero eget mi. Nunc sed
-              auctor sem, non scelerisque dui. 
-          title:
-            type: text
-            value: Another call to action
       - _id: a17cd82d-2917-421a-9409-8b008db50910
         type: container
         slots:
@@ -201,5 +209,5 @@ composition:
                     id dui id auctor.
         variant: 13-23
 created: '2022-09-29T23:47:25.568941+00:00'
-modified: '2022-10-01T18:00:32.883025+00:00'
+modified: '2022-10-02T18:30:55.946572+00:00'
 pattern: false

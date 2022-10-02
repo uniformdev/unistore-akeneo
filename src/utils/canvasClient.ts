@@ -1,15 +1,6 @@
-import {
-  CanvasClient,
-  CANVAS_PUBLISHED_STATE,
-  CANVAS_DRAFT_STATE,
-  enhance,
-  EnhancerBuilder,
-  compose,
-} from '@uniformdev/canvas';
-import { AKENEO_PARAMETER_TYPES } from '@uniformdev/canvas-akeneo';
+import { CanvasClient, CANVAS_PUBLISHED_STATE, CANVAS_DRAFT_STATE, enhance } from '@uniformdev/canvas';
 import getConfig from 'next/config';
-import akeneoEnhancer from './akeneo/akeneoEnhancer';
-import { akeneoModelConverter } from './akeneo/akeneoModelConverter';
+import { createDefaultEnhancerBuilder } from './enhancers';
 
 const {
   serverRuntimeConfig: { apiKey, apiHost, projectId },
@@ -31,10 +22,7 @@ export async function getCompositionBySlug(slug: string, context: any) {
   await enhance({
     composition,
     context,
-    enhancers: new EnhancerBuilder().parameterType(
-      AKENEO_PARAMETER_TYPES,
-      compose(akeneoEnhancer, akeneoModelConverter)
-    ),
+    enhancers: createDefaultEnhancerBuilder,
   });
 
   return composition;

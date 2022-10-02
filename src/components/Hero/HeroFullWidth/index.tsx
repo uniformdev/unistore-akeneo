@@ -1,12 +1,11 @@
 import React from 'react';
-import { HeroProps } from '../HeroProps';
 
-const HeroFullWidth = ({ title, subtitle, backgroundImage }: HeroProps) => {
+const HeroFullWidth = ({ title, subtitle, backgroundImage }: any) => {
   return (
     <div
       className={`full-width-image ${subtitle ? 'h-96' : 'h-36'}`}
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url(${backgroundImage?.src})`,
         minHeight: '300px',
       }}
     >

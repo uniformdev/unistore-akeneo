@@ -41,8 +41,9 @@ slots:
       - $localization
       - productBanner
       - categoryHeader
+      - featuredProduct
     inheritAllowedComponents: false
 titleParameter: pageMetaTitle
 canBeComposition: true
 created: '2022-09-29T23:47:24.118403+00:00'
-updated: '2022-10-01T23:34:43.916623+00:00'
+updated: '2022-10-02T18:04:20.689733+00:00'

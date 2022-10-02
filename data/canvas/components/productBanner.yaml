@@ -1,9 +1,20 @@
 id: productBanner
 name: Product Banner
 icon: image
-parameters: []
+parameters:
+  - id: product
+    name: Product
+    type: akeneo-product-selector
+    helpText: ''
+    typeConfig:
+      required: true
+      completeness: 50
+      allowedLocale: en_US
+      allowedChannel: ecommerce
+      restrictSearch: products
+      allowedProductCategories: {}
 useTeamPermissions: true
 slots: []
 canBeComposition: false
 created: '2022-10-01T20:57:54.184188+00:00'
-updated: '2022-10-01T20:57:54.184188+00:00'
+updated: '2022-10-02T17:42:44.870936+00:00'
