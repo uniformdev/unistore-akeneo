@@ -9,21 +9,52 @@ composition:
       value: Fall 2022 - New collection
   slots:
     content:
-      - _id: 4a533ba3-c2a9-43c8-8260-26f1195ed30e
-        type: featuredProduct
+      - _id: 7394f9b9-fba1-4800-b33d-b65afbaac919
+        type: $personalization
+        slots:
+          pz:
+            - _id: 4a533ba3-c2a9-43c8-8260-26f1195ed30e
+              type: featuredProduct
+              parameters:
+                title:
+                  type: text
+                  value: Mow Your Lawn Like a Bostonian
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: unlockBoston
+                        r: 0
+                        op: '>'
+                    name: 'Featured Product: Mow Your Lawn Like a Bostonian'
+                subtitle:
+                  type: text
+                  value: Electric start for smooth experience
+                productAsset:
+                  type: akeneo-asset-selector
+                  value:
+                    locale: en_US
+                    assetIds:
+                      - products/images_image_1_1583534011_1_jpg_products
+            - _id: 41cec426-ad3d-4dc5-86af-a3ab6c0e53d9
+              type: featuredProduct
+              parameters:
+                title:
+                  type: text
+                  value: Mow Your Lawn Like a Boss!
+                subtitle:
+                  type: text
+                  value: Electric start for smooth experience
+                productAsset:
+                  type: akeneo-asset-selector
+                  value:
+                    locale: en_US
+                    assetIds:
+                      - products/images_image_1_1583534075_1_jpg_products
         parameters:
-          title:
+          trackingEventName:
             type: text
-            value: Mow Your Lawn Like a Boss!
-          subtitle:
-            type: text
-            value: Electric start for smooth experience
-          productAsset:
-            type: akeneo-asset-selector
-            value:
-              locale: en_US
-              assetIds:
-                - products/images_image_1_1583533903_1_jpg_products
+            value: Unlock Boston
       - _id: 5c320460-fa73-4605-a049-182367f81d1f
         type: featuredProducts
         parameters:
@@ -98,5 +129,5 @@ composition:
             type: text
             value: See more
 created: '2022-10-02T00:57:40.263123+00:00'
-modified: '2022-10-02T18:33:56.917859+00:00'
+modified: '2022-10-02T18:42:05.264038+00:00'
 pattern: false
