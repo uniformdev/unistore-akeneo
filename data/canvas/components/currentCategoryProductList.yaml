@@ -1,0 +1,15 @@
+id: currentCategoryProductList
+name: Current Category Product List
+icon: feed
+parameters:
+  - id: currentCategoryProducts
+    name: Number of products to display
+    type: number
+    helpText: ''
+    typeConfig:
+      required: true
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2022-09-29T23:47:23.966387+00:00'
+updated: '2022-10-01T22:45:00.036463+00:00'

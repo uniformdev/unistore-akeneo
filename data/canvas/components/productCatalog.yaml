@@ -1,0 +1,17 @@
+id: productCatalog
+name: Product Catalog
+icon: browse
+parameters:
+  - id: showFilters
+    name: Show Filters
+    type: checkbox
+    typeConfig: null
+  - id: showSorting
+    name: Show Sorting
+    type: checkbox
+    typeConfig: null
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2022-09-29T23:47:24.71622+00:00'
+updated: '2022-10-02T00:30:33.834385+00:00'

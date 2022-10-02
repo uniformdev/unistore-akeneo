@@ -1,0 +1,38 @@
+composition:
+  _name: Product Detail
+  _id: 75f2e086-0dec-48da-b44b-d724eeed7bae
+  _slug: product-detail
+  type: page
+  parameters:
+    pageMetaTitle:
+      type: text
+      value: 'Unistore: Product Detail'
+  slots:
+    content:
+      - _id: fa888131-0cba-4d35-9600-313fa00dd9f2
+        type: productBanner
+      - _id: 17362ebe-a1ea-4060-81fe-f34cf7742c3e
+        type: container
+        slots:
+          left:
+            - _id: 553b4a74-f7e2-49ac-8c7b-9b2178eccf91
+              type: productImageGallery
+          right:
+            - _id: 803cd8a3-7f18-4d1c-8a8b-652d8276a892
+              type: productInfo
+        variant: productDetail
+      - _id: 14532d40-96f6-4f6f-b769-8bd1ad4ff9ac
+        type: productDescription
+        parameters:
+          title:
+            type: text
+            value: About this product
+      - _id: b77eb5ce-8a20-4137-89e6-1d8d24b0d091
+        type: relatedProducts
+        parameters:
+          title:
+            type: text
+            value: Explore related products
+created: '2022-09-29T23:47:25.654038+00:00'
+modified: '2022-10-01T21:03:42.755214+00:00'
+pattern: false

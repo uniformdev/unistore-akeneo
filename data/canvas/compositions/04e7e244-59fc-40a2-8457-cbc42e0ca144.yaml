@@ -1,0 +1,205 @@
+composition:
+  _name: Home
+  _id: 04e7e244-59fc-40a2-8457-cbc42e0ca144
+  _slug: /
+  type: page
+  parameters:
+    pageMetaTitle:
+      type: text
+      value: 'Unistore: Home'
+    pageMetaDescription:
+      type: text
+      value: Uniform commerce starter kit
+  slots:
+    content:
+      - _id: 596ad29e-3ebf-4663-8978-40a354cff26a
+        type: $personalization
+        slots:
+          pz:
+            - _id: 360de9a4-6c67-49f2-a6b4-dee029d921fe
+              type: hero
+              variant: fullWidth
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: launchSpecial
+                        r: 50
+                        op: '>='
+                backgroundImage:
+                  type: akeneo-asset-selector
+                  value:
+                    locale: en_US
+                    assetIds:
+                      - >-
+                        models/images_banner_image_milwaukee_mens_black_no_days_off_hooded_sweatshirt_3_jpg_models
+            - _id: e92851b3-2a97-496d-a881-8867454332ba
+              type: hero
+              variant: fullWidth
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: shoppingCartActive
+                        op: +
+                backgroundImage:
+                  type: akeneo-asset-selector
+                  value:
+                    locale: en_US
+                    assetIds:
+                      - >-
+                        models/images_banner_image_corliving_dillon_oblong_dining_table_1_png_models
+            - _id: 774d3045-1b05-4412-91e4-af57bcd22a4e
+              type: hero
+              variant: ''
+              parameters:
+                title:
+                  type: text
+                  value: Hello, there!
+                subtitle:
+                  type: text
+                  value: and a subtitle to support the message
+                backgroundImage:
+                  type: akeneo-asset-selector
+                  value:
+                    locale: en_US
+                    assetIds:
+                      - >-
+                        atmosphere/images_image_atmos_brown_armen_livings_sofas_loveseats_small_png
+        parameters:
+          trackingEventName:
+            type: text
+            value: Home hero
+      - _id: c3a6a04e-f1cd-4053-b607-1229f7721c4a
+        type: callToAction
+        parameters:
+          text:
+            type: text
+            value: >-
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+              commodo sem nec erat porta viverra. Suspendisse aliquam sapien sed
+              velit posuere tempus.
+          title:
+            type: text
+            value: Why we are special
+          callToActionLink:
+            type: text
+            value: null
+          callToActionTitle:
+            type: text
+            value: null
+      - _id: e57fa940-1c8d-4c02-a6d8-cebcd3f89282
+        type: featuredProducts
+        parameters:
+          title:
+            type: text
+            value: Winter is coming
+          products:
+            type: akeneo-product-selector
+            value:
+              locale: en_US
+              channel: ''
+              productIds:
+                - '1583534139'
+                - '1583534195'
+                - '1583535543'
+          seeMoreUrl:
+            type: text
+            value: /shop/snowblowers
+          seeMoreTitle:
+            type: text
+            value: get ready to blow some snow
+      - _id: eaefe197-d7bb-4db4-94f8-226385e2be63
+        type: callToAction
+        parameters:
+          text:
+            type: text
+            value: >-
+              Curabitur placerat, turpis non cursus rhoncus, tellus tortor
+              lobortis quam, vitae elementum nibh libero eget mi. Nunc sed
+              auctor sem, non scelerisque dui. 
+          title:
+            type: text
+            value: Another call to action
+      - _id: a17cd82d-2917-421a-9409-8b008db50910
+        type: container
+        slots:
+          left:
+            - _id: e0aaeb45-842d-4f8a-aade-9618e38f5930
+              type: callToAction
+              variant: mini
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    Curabitur placerat, turpis non cursus rhoncus, tellus tortor
+                    lobortis quam, vitae elementum nibh libero eget mi. Nunc sed
+                    auctor sem, non scelerisque dui.
+                title:
+                  type: text
+                  value: null
+                callToActionLink:
+                  type: text
+                  value: /shop/shop-all
+                callToActionTitle:
+                  type: text
+                  value: See all products
+          right:
+            - _id: ede95ce5-8870-44e1-969a-935dcab87cf1
+              type: featureItem
+              parameters:
+                icon:
+                  type: text
+                  value: >-
+                    https://images.ctfassets.net/k2fp7upx2p2q/4Vfsfd83ZwsYPEg3bqOTYR/97fe668ddd7bd3ef4e4178034be915e6/download-3_1.png
+                text:
+                  type: text
+                  value: >-
+                    Quisque sit amet turpis neque. Aenean cursus vulputate erat.
+                    Nullam sagittis est feugiat maximus sagittis. Fusce euismod
+                    id dui id auctor.
+            - _id: 53904fac-a5d3-4cda-8c8f-44787a9a5e4d
+              type: featureItem
+              parameters:
+                icon:
+                  type: text
+                  value: >-
+                    https://images.ctfassets.net/k2fp7upx2p2q/C8DH02LVzIr3MBk0QplMq/d898b15fa86f56ff6305b30140934d82/download-4_1.png
+                text:
+                  type: text
+                  value: >-
+                    Quisque sit amet turpis neque. Aenean cursus vulputate erat.
+                    Nullam sagittis est feugiat maximus sagittis. Fusce euismod
+                    id dui id auctor.
+            - _id: 17e6bcf5-cbdf-45a8-b077-5f82a0a005f1
+              type: featureItem
+              parameters:
+                icon:
+                  type: text
+                  value: >-
+                    https://images.ctfassets.net/k2fp7upx2p2q/Z1eWhYnLfEbzbVYcoD4F0/28cf3f07b0d4874f4112fa77420c0851/download-5_1.png
+                text:
+                  type: text
+                  value: >-
+                    Quisque sit amet turpis neque. Aenean cursus vulputate erat.
+                    Nullam sagittis est feugiat maximus sagittis. Fusce euismod
+                    id dui id auctor.
+            - _id: 9cdb9c93-f694-4377-b3fb-ceb3d7df1e70
+              type: featureItem
+              parameters:
+                icon:
+                  type: text
+                  value: >-
+                    https://images.ctfassets.net/k2fp7upx2p2q/2NLUr7QNJSu21zLNwK28gW/9e3f6c087775a4a8592595312c72a7b7/download-1_1.png
+                text:
+                  type: text
+                  value: >-
+                    Quisque sit amet turpis neque. Aenean cursus vulputate erat.
+                    Nullam sagittis est feugiat maximus sagittis. Fusce euismod
+                    id dui id auctor.
+        variant: 13-23
+created: '2022-09-29T23:47:25.568941+00:00'
+modified: '2022-10-01T18:00:32.883025+00:00'
+pattern: false

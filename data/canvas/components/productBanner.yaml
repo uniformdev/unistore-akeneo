@@ -1,0 +1,9 @@
+id: productBanner
+name: Product Banner
+icon: image
+parameters: []
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2022-10-01T20:57:54.184188+00:00'
+updated: '2022-10-01T20:57:54.184188+00:00'

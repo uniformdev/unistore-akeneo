@@ -1,0 +1,9 @@
+id: categoryHeader
+name: Category Header
+icon: toolbar-top
+parameters: []
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2022-10-01T23:34:32.995179+00:00'
+updated: '2022-10-01T23:37:02.367421+00:00'

@@ -1,0 +1,22 @@
+composition:
+  _name: Product Category
+  _id: e0cb3dbf-fce9-4cbf-86e5-77aad1b589c9
+  _slug: product-category
+  type: page
+  parameters:
+    pageMetaTitle:
+      type: text
+      value: 'Unistore: Product Category Page'
+  slots:
+    content:
+      - _id: b189ca17-1fb9-4c17-8453-401f38153f6d
+        type: categoryHeader
+      - _id: 4b6f9a0e-4675-453b-a1d7-5d3261b8bf49
+        type: currentCategoryProductList
+        parameters:
+          currentCategoryProducts:
+            type: number
+            value: '10'
+created: '2022-09-29T23:47:25.745327+00:00'
+modified: '2022-10-01T23:36:41.976742+00:00'
+pattern: false

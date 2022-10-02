@@ -1,0 +1,35 @@
+id: featuredProducts
+name: Featured Products
+icon: shopping-bag
+parameters:
+  - id: title
+    name: Title
+    type: text
+    typeConfig:
+      required: true
+  - id: seeMoreTitle
+    name: See More Title
+    type: text
+    typeConfig: null
+  - id: seeMoreUrl
+    name: See More Url
+    type: text
+    typeConfig: null
+  - id: products
+    name: Products
+    type: akeneo-product-selector
+    helpText: ''
+    typeConfig:
+      required: true
+      multiSelect: true
+      completeness: 0
+      allowedLocale: en_US
+      allowedChannel: ''
+      restrictSearch: all
+      allowedProductCategories: {}
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2022-09-29T23:47:24.067963+00:00'
+updated: '2022-10-01T17:46:35.425092+00:00'

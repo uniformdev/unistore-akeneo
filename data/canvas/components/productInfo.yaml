@@ -1,0 +1,9 @@
+id: productInfo
+name: Product Info
+icon: info
+parameters: []
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2022-09-29T23:47:24.717629+00:00'
+updated: '2022-09-29T23:47:24.717629+00:00'
