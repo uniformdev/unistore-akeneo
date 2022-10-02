@@ -44,3 +44,5 @@ storybook-static
 .netlify
 
 .env
+index.deno.js
+manifest.json

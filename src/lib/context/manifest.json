@@ -1,8 +1,17 @@
 {
   "project": {
     "pz": {
+      "agg": {
+        "raingear": {
+          "inputs": [
+            {
+              "dim": "rain"
+            }
+          ]
+        }
+      },
       "enr": {
-        "1": {
+        "cat": {
           "cap": 100
         }
       },
@@ -43,6 +52,46 @@
                   "rhs": ""
                 },
                 "cookieName": "cartSize"
+              }
+            ]
+          }
+        },
+        "unlockBoston": {
+          "str": 50,
+          "cap": 100,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "key": "ntl-city",
+                "type": "QK",
+                "match": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "Boston"
+                }
+              }
+            ]
+          }
+        },
+        "rain": {
+          "str": 50,
+          "cap": 100,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "type": "QS",
+                "match": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "rain"
+                },
+                "queryName": "utm_campaign"
               }
             ]
           }
