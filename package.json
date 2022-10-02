@@ -44,7 +44,9 @@
     "format": "prettier --write \"./**/*.{ts,tsx}\"",
     "fix-js-lint": "eslint --fix \"./**/*.{ts,tsx}\"",
     "fix": "npm run format && npm run fix-js-lint",
-    "start:stackblitz": "npm install && next dev"
+    "start:stackblitz": "npm install && next dev",
+    "copy:deno": "shx cp node_modules/@uniformdev/context-edge-netlify/dist/index.deno.js src/lib/context",
+    "postinstall": "run-s copy:deno"
   },
   "dependencies": {
     "@types/lodash": "^4.14.178",
@@ -55,6 +57,7 @@
     "@uniformdev/cli": "^17.2.0",
     "@uniformdev/context": "^17.2.0",
     "@uniformdev/context-devtools": "^17.2.0",
+    "@uniformdev/context-edge-netlify": "^17.2.0",
     "@uniformdev/context-next": "^17.2.0",
     "@uniformdev/context-react": "^17.2.0",
     "classnames": "^2.3.1",
@@ -107,6 +110,7 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
+    "shx": "^0.3.4",
     "tailwindcss": "^3.0.18",
     "typescript": "^4.5.2"
   },
